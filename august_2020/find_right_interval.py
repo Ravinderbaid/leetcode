@@ -22,7 +22,7 @@ class Solution:
     Explanation: There is only one interval in the collection, so it outputs -1.
 
 
-    Example 2:
+    Examples 2:
 
     Input: [ [3,4], [2,3], [1,2] ]
 
