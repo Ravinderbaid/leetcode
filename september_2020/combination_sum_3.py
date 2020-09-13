@@ -22,18 +22,22 @@ class Solution:
     """
 
     def combinationSum3(self, k: int, n: int) -> List[List[int]]:
-        def backtrack(k, start, x, n, l, ans):
+        ans = []
+
+        def backtrack(start, x, n, l):
             if start == k:
-                if sum(l) == n:
+                if n == 0:
                     ans.append(list(l))
-                return
-            elif start > k or len(l) > k:
                 return
             else:
                 for i in range(x, 10):
                     l.append(i)
-                    backtrack(k, start + 1, x + 1, n, l, ans)
+                    backtrack(start + 1, i + 1, n - i, l)
                     l.pop()
             return ans
 
-        return backtrack(k, 0, 1, n, [], [])
+        return backtrack(0, 1, n, [])
+
+
+s = Solution()
+s.combinationSum3(3, 7)
