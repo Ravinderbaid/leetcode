@@ -12,7 +12,7 @@ class WordDictionary:
         """
         Initialize your data structure here.
         """
-        self.root = TrieNode()
+        self.root = TrieNode() #Try to do without a new class example dictionary in dictionary
 
     def addWord(self, word: str) -> None:
         """
